@@ -1,0 +1,20 @@
+[Unit]
+Description=http-server Service
+ConditionPathExists=/home/coffee33/http-server
+After=network.target multi-user.target
+
+[Service]
+Type=simple
+User=coffee33
+Group=coffee33
+
+WorkingDirectory=/home/coffee33/http-server/
+ExecStart=/home/coffee33/http-server/http-server
+
+Restart=on-failure
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=appgoservice
+[Install]
+WantedBy=multi-user.target
