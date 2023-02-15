@@ -8,8 +8,8 @@ Type=simple
 User=coffee33
 Group=coffee33
 
-WorkingDirectory=/home/coffee33/http-server/
-ExecStart=/home/coffee33/http-server/http-server
+WorkingDirectory=/home/http-server/
+ExecStart=/home/http-server/http-server
 
 Restart=on-failure
 RestartSec=10
